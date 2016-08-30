@@ -20,6 +20,14 @@
         </div>
         <div class="">
             RequireJS默认假定所有的依赖资源都是js脚本，因此无需在module ID上再加".js"后缀，RequireJS在进行module ID到path的解析时会自动补上后缀。
+            如果一个module ID符合下述规则之一，其ID解析会避开常规的"baseUrl + paths"配置，而是直接将其加载为一个相对于当前HTML文档的脚本：
+            1、以 ".js" 结束.
+            2、以 "/" 开始.
+            3、包含 URL 协议, 如 "http:" or "https:".
+        </div>
+        <div class="">
+            RequireJS实现了AMD的API.
+            CommonJS是使用exports对象来定义模块的一种方法，它定义了模块的内容。
         </div>
 
 
